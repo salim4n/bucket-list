@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block style %}
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    {% endblock %}
+    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+    <link rel="icon" href="{{ asset('img/favicon.png') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <title>{% block title %}Bucket-List {% endblock %}</title>
+</head>
+<body >
+<div class="container">
+    <div class="head">
+        <header>
+            <h1>{% block headTitle %}Bucket-List{% endblock %}</h1>
+            <navs>
+                <ul>
+                    <li><a href="{{ path('main_home') }}" title="home">Hello there !</a></li>
+                    <li><a href="{{ path('main_bucket') }}"title="homeBucket" >Page d'accueil</a></li>
+                    <li><a href="{{ path('wish_list') }}"title="wish" >Page de souhait</a></li>
+                    <li><a href="{{ path('main_aboutUs') }}"title="about us" >about us</a></li>
+                </ul>
+            </navs>
+        </header>
+    </div>
+    <div class="main">
+
+
+        <main>
+            {% block main %}
+            {% endblock %}
+        </main>
+    </div>
+    <div class="footer">
+        <footer>
+            <div><strong>&copy;</strong><em>{{ "now"| date("Y") }} Bucket-List</em></div>
+        </footer>
+    </div>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+</div>
