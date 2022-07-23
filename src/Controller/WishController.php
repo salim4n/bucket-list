@@ -25,11 +25,12 @@ class WishController extends AbstractController
     }
 
     /**
-     * @Route("/wish/detail", name="wish_detail")
+     * @Route("/wish/detail/{id} ", name="wish_detail")
      */
     public function detail(int $id, WishRepository $wishRepository){
 
         $wish = $wishRepository->find($id);
+        dump($wish);
 
         if(!$wish) {
             throw $this-> createNotFoundException('This wish do not exists.');

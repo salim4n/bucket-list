@@ -1,4 +1,4 @@
-{% extends '../base.html.twig' %}
+{% extends "base.html.twig" %}
 
 {% block headTitle %}
 
@@ -7,10 +7,10 @@
 {% block main %}
     <div>
         <ul>
-                <li><h2>{{ w.title }}</h2></li>
-                <li><h4><em>{{ w.author }}</em></h4></li>
-                <li><p>{{ w.description }}</p></li>
-                <li><p>{{ w.dateCreated }}</p></li>
+                <li><h2>{{ wish.title }}</h2></li>
+                <li><h4><em>{{ wish.author }}</em></h4></li>
+                <li><p>{{ wish.description }}</p></li>
+                <li><p>{{ wish.dateCreated }}</p></li>
         </ul>
     </div>
 {% endblock %}

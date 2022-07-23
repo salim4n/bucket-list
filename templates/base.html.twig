@@ -25,11 +25,23 @@
                     <li><a href="{{ path('main_home') }}" title="home">Hello there !</a></li>
                     <li><a href="{{ path('main_bucket') }}"title="homeBucket" >Page d'accueil</a></li>
                     <li><a href="{{ path('wish_list') }}"title="wish" >Page de souhait</a></li>
+                    <li><a href="{{ path('create') }}"title="creer" >creer un  souhait</a></li>
                     <li><a href="{{ path('main_aboutUs') }}"title="about us" >about us</a></li>
                 </ul>
             </navs>
         </header>
     </div>
+    <div>
+    </div>
+
+    {% for label, messages in app.flashes %}
+    {% for message in messages %}
+    <div class="flash-{{ label }}">
+        {{ message }}
+    </div>
+    {% endfor%}
+    {% endfor %}
+
     <div class="main">
 
 
