@@ -30,6 +30,9 @@ class Wish
     #[ORM\Column(length: 50)]
     private ?string $dateCreated = null;
 
+    #[ORM\ManyToOne(inversedBy: 'relation')]
+    private ?Categorie $Sport = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -91,6 +94,18 @@ class Wish
     public function setDateCreated(string $dateCreated): self
     {
         $this->dateCreated = $dateCreated;
+
+        return $this;
+    }
+
+    public function getSport(): ?Categorie
+    {
+        return $this->Sport;
+    }
+
+    public function setSport(?Categorie $Sport): self
+    {
+        $this->Sport = $Sport;
 
         return $this;
     }
