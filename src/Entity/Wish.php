@@ -30,9 +30,6 @@ class Wish
     #[ORM\Column(length: 50)]
     private ?string $dateCreated = null;
 
-    #[ORM\ManyToOne(inversedBy: 'relation')]
-    private ?Categorie $Sport = null;
-
     public function getId(): ?int
     {
         return $this->id;

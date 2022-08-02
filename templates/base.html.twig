@@ -16,9 +16,10 @@
     <title>{% block title %}Bucket-List {% endblock %}</title>
 </head>
 <body >
-<div class="container">
+
     <div class="head">
         <header>
+            <div class="container">
             <h1>{% block headTitle %}Bucket-List{% endblock %}</h1>
             <navs>
                 <ul>
@@ -27,12 +28,15 @@
                     <li><a href="{{ path('wish_list') }}"title="wish" >Page de souhait</a></li>
                     <li><a href="{{ path('create') }}"title="creer" >creer un  souhait</a></li>
                     <li><a href="{{ path('main_aboutUs') }}"title="about us" >about us</a></li>
+                    <li><a href="{{ path('app_logout') }}"title="log out " >about us</a></li>
+                    <li><a href="{{ path('app_login') }}"title="log in " >about us</a></li>
+                    <li><a href="{{ path('app_register') }}"title="register " >about us</a></li>
                 </ul>
             </navs>
         </header>
     </div>
     <div>
-    </div>
+</div>
 
     {% for label, messages in app.flashes %}
     {% for message in messages %}

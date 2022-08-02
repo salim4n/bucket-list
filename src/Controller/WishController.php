@@ -2,15 +2,15 @@
 
 namespace App\Controller;
 
-use App\Entity\Wish;
 use App\Repository\WishRepository;
-use Doctrine\ORM\EntityManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class WishController extends AbstractController
 {
+
+
     /**
      * @Route("/wish", name="wish_list")
      */
